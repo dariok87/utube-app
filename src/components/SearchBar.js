@@ -1,7 +1,7 @@
 import React from "react";
 
 class SearchBar extends React.Component {
-state = { text: ""}
+  state = { text: ''};
 
   render() {
     return (
@@ -9,7 +9,7 @@ state = { text: ""}
         <form className="ui form">
           <div className="field">
             <label>Video Search</label>
-            <input type="text" />
+            <input type="text" value={this.state.text} />
           </div>
         </form>
       </div>
