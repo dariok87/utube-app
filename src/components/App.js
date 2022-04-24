@@ -3,7 +3,7 @@ import SearchBar from "./SearchBar";
 
 class App extends React.Component {
   onTextSubmit = (term) => {
-
+    console.log(term);
   };
 
   render() {
