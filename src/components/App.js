@@ -4,7 +4,7 @@ import youtube from "../apis/youtube";
 
 class App extends React.Component {
   onTextSubmit = async (term) => {
-    const response = youtube.get("/search", {
+    const response = await youtube.get("/search", {
       params: {
         q: term
       }
