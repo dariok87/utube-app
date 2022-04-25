@@ -3,12 +3,14 @@ import SearchBar from "./SearchBar";
 import youtube from "../apis/youtube";
 
 class App extends React.Component {
-  onTextSubmit = (term) => {
-    youtube.get("/search", {
+  onTextSubmit = async (term) => {
+    const response = youtube.get("/search", {
       params: {
         q: term
       }
     });
+
+    console.log(response);
   };
 
   render() {
