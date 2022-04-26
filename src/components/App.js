@@ -17,7 +17,9 @@ class App extends React.Component {
 
   render() {
     return ( 
-      <div><SearchBar onFormSubmit={this.onTextSubmit}/></div>
+      <div><SearchBar onFormSubmit={this.onTextSubmit}/>
+        I have {this.state.videos.length} videos. {/*we should see value of 0 before submitting youtube request*/}
+      </div>
     );
   }
 }
