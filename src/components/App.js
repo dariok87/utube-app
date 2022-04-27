@@ -1,7 +1,7 @@
 import React from "react";
 import SearchBar from "./SearchBar";
 import youtube from "../apis/youtube";
-import VideoList from "./videoList";
+import VideoList from "./VideoList";
 
 class App extends React.Component {
   state = { videos: [] };
@@ -19,8 +19,8 @@ class App extends React.Component {
   render() {
     return ( 
       <div className="ui container">
-        <SearchBar onFormSubmit={this.onTextSubmit}/>
-        <VideoList />
+        <SearchBar onFormSubmit={this.onTextSubmit} />
+        <VideoList videos={this.state.videos} /> {/* We give the VideoList objects that we fetched*/}
       </div>
     );
   }
