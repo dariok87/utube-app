@@ -1,6 +1,7 @@
 import React from "react";
 import SearchBar from "./SearchBar";
 import youtube from "../apis/youtube";
+import VideoList from "./videoList";
 
 class App extends React.Component {
   state = { videos: [] };
@@ -17,8 +18,9 @@ class App extends React.Component {
 
   render() {
     return ( 
-      <div><SearchBar onFormSubmit={this.onTextSubmit}/>
-        I have {this.state.videos.length} videos. {/*we should see value of 0 before submitting youtube request*/}
+      <div className="ui container">
+        <SearchBar onFormSubmit={this.onTextSubmit}/>
+        <VideoList />
       </div>
     );
   }
